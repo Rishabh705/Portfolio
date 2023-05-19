@@ -26,7 +26,7 @@ header {
 
 .navlist {
   position: absolute;
-  top: -0.3rem;
+  top: -0.2rem;
   right: 2rem;
 }
 
@@ -115,15 +115,14 @@ body {
 }
 
 .container2 {
+  display: flex;
   position: absolute;
-  left: 10vw;
-  top: 32vh;
-  justify-content: space-evenly;
+  width: 65%;
+  flex-flow: column;
   /* border: 2px solid yellow; */
 }
 
 .h3 {
-  margin-right: auto;
   color: white;
   font-size: 3rem;
   cursor: default;
@@ -138,8 +137,8 @@ body {
 
 .animated {
   position: absolute;
-  top: 30vh;
-  right: 50vw;
+  /* top: 30vh;
+  right: 50vw; */
   /* border: 1px solid red; */
 }
 
@@ -428,10 +427,12 @@ h2 {
   }
 
   .h2 {
+    margin: auto;
     font-size: 2.2rem;
   }
 
   .h3 {
+    margin: auto;
     font-size: 1.9rem;
   }
   .container1{
@@ -439,7 +440,7 @@ h2 {
     flex-flow: column;
   }
   .animated{
-    top:50vh;
+    top:60vh;
     left:1vw;
   }
   .slash{
@@ -547,8 +548,7 @@ h2 {
   }
   
   .container2{
-    top:20vh;
-    left:13vw;
+    top: 27vh;
   }
   .container3{
     padding: 2rem 0 2rem 2rem;
@@ -644,10 +644,12 @@ h2 {
   }
 
   .h2 {
+    margin: auto;
     font-size: 2.2rem;
   }
 
   .h3 {
+    margin: auto;
     font-size: 1.9rem;
   }
   .container1{
@@ -764,7 +766,6 @@ h2 {
   
   .container2{
     top:28vh;
-    left:16vw;
   }
   .container3{
     padding: 2rem 0 2rem 2rem;
@@ -839,7 +840,6 @@ h2 {
   }
 }
 
-
 @media screen and (min-width:768px) {
   .hdr{
     height: 3.5rem;
@@ -860,18 +860,20 @@ h2 {
   }
 
   .h2 {
+    margin: auto;
     font-size: 2.8rem;
   }
 
   .h3 {
+    margin: auto;
     font-size: 2.5rem;
   }
   .container1{
-    height: 39rem;
+    height: 41rem;
     flex-flow: column;
   }
   .animated{
-    top:56vh;
+    top:64vh;
     left:13vw;
   }
   .slash{
@@ -980,7 +982,6 @@ h2 {
   
   .container2{
     top:26vh;
-    left:15vw;
   }
   .container3{
     padding: 2rem 0 2rem 2rem;
@@ -995,7 +996,7 @@ h2 {
     width:100%;
   }
   .figure{
-    width: 40%;
+    width: 30%;
     height: auto;
     top:-0.4rem;
     right:0rem;
@@ -1049,7 +1050,6 @@ h2 {
     left: 0.7rem;
   }
 
-
   p {
     font-size: 1rem;
   }
@@ -1071,10 +1071,12 @@ h2 {
   }
 
   .h2 {
+    margin-left: 18rem;
     font-size: 2.4rem;
   }
 
   .h3 {
+    margin-left: 18rem;
     font-size: 2.2rem;
   }
   .container1{
@@ -1191,7 +1193,7 @@ h2 {
   
   .container2{
     top:35vh;
-    left:10vw;
+    left:-20vw;
   }
   .container3{
     padding: 2rem 0 2rem 2rem;
@@ -1205,8 +1207,20 @@ h2 {
   .section3{
     width:100%;
   }
+  .navlist{
+    display: inline;
+    top:0.05rem;
+    right: 0rem;
+  }
+  li{
+    font-size: 1.4rem;
+    margin-inline: 0.7rem;
+  }
+  button{
+    display: none;
+  }
   .figure{
-    width: 40%;
+    width: 30%;
     height: auto;
     top:-0.4rem;
     right:0rem;
@@ -1230,47 +1244,51 @@ h2 {
 
 @media screen and (min-width:1200px) {
   .hdr{
-    height: 4.8rem;
+    height: 3.5rem;
+  }
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 
   h1 {
-    padding: 0.5rem 8px 8px 8px;
-    font-size: 3rem;
+    padding: 8px 8px 8px 8px;
+    font-size: 2rem;
   }
 
   .h2 {
-    font-size: 4rem;
+    margin-left: 9rem;
+    font-size: 3.0rem;
   }
 
   .h3 {
-    font-size: 3.5rem;
+    margin-left: 9rem;
+    font-size: 2.6rem;
   }
-
   .container1{
-    height: 60rem;
+    height: 45rem;
     flex-flow: row;
   }
-
   .animated{
-    top:30vh;
+    top:36vh;
     left:55vw;
   }
-
   .slash{
-    width:1rem;
-    height:18rem;
+    width:0.80rem;
+    height:10rem;
   }
-
   .greater::after,.greater::before{
-    width: 1rem;
-    height: 15rem;
+    width: 0.80rem;
+    height: 8.8rem;
   }
-
   .smaller::after,.smaller::before{
-    width: 1rem;
-    height: 15rem;
+    width: 0.8rem;
+    height: 8.8rem;
   }
-
+  .articlelist li{
+    font-size: 20px;
+  }
   @keyframes down {
     0% {
       opacity: 0%;
@@ -1293,34 +1311,34 @@ h2 {
   @keyframes slideright1 {
     0% {
       opacity: 0%;
-      transform: translateX(-150px) translateY(-3.0rem) rotateZ(60deg);
+      transform: translateX(-150px) translateY(-2.45rem) rotateZ(60deg);
     }
   
     80% {
       opacity: 80%;
-      transform: translateX(55px) translateY(-3.0rem) rotateZ(60deg);
+      transform: translateX(130px) translateY(-2.45rem) rotateZ(60deg);
     }
   
     100% {
       opacity: 100%;
-      transform: translateX(10px) translateY(-3.0rem) rotateZ(60deg);
+      transform: translateX(110px) translateY(-2.45rem) rotateZ(60deg);
     }
   }
   
   @keyframes slideright2 {
     0% {
       opacity: 0%;
-      transform: translateX(-150px) translateY(4.2rem) rotateZ(-60deg);
+      transform: translateX(-150px) translateY(1.65rem) rotateZ(-60deg);
     }
   
     80% {
       opacity: 80%;
-      transform: translateX(55px) translateY(4.2rem) rotateZ(-60deg);
+      transform: translateX(130px) translateY(1.65rem) rotateZ(-60deg);
     }
   
     100% {
       opacity: 100%;
-      transform: translateX(10px) translateY(4.2rem) rotateZ(-60deg);
+      transform: translateX(110px) translateY(1.65rem) rotateZ(-60deg);
     }
   }
   
@@ -1328,43 +1346,88 @@ h2 {
     0% {
       opacity: 0%;
   
-      transform: translateX(797px) translateY(-3.0rem) rotateZ(-60deg);
+      transform: translateX(797px) translateY(-2.45rem) rotateZ(-60deg);
     }
   
     80% {
       opacity: 80%;
   
-      transform: translateX(420px) translateY(-3.0rem) rotateZ(-60deg);
+      transform: translateX(335px) translateY(-2.45rem) rotateZ(-60deg);
     }
   
     100% {
       opacity: 100%;
-      transform: translateX(454px) translateY(-3.0rem) rotateZ(-60deg);
+      transform: translateX(353px) translateY(-2.45rem) rotateZ(-60deg);
     }
   }
   
   @keyframes slideleft2 {
     0% {
       opacity: 0%;
-      transform: translateX(797px) translateY(4.2rem) rotateZ(60deg);
+      transform: translateX(797px) translateY(1.65rem) rotateZ(60deg);
     }
   
     80% {
       opacity: 80%;
-      transform: translateX(420px) translateY(4.2rem) rotateZ(60deg);
+      transform: translateX(335px) translateY(1.65rem) rotateZ(60deg);
     }
   
     100% {
       opacity: 100%;
-      transform: translateX(450px) translateY(4.2rem) rotateZ(60deg);
+      transform: translateX(353px) translateY(1.65rem) rotateZ(60deg);
     }
   }
-  
+  .navlist{
+    display: inline;
+    top:0.05rem;
+    right: 0rem;
+  }
+  li{
+    font-size: 1.4rem;
+    margin-inline: 0.7rem;
+  }
+  button{
+    display: none;
+  }
   .container2{
-    top:35vh;
-    left:10vw;
+    top:36vh;
+    left:0vw;
+  }
+  .container3{
+    padding: 2rem 0 2rem 2rem;
+  }
+  .container5{
+    flex-flow: row;
+  }
+  .article{
+    margin: 40px 30px 0px 62px;
+  }
+  .section3{
+    margin-left: 5rem;
+    margin-top: 3rem;
+    width:70%;
+  }
+  .figure{
+    width: 100%;
+    height: auto;
+    top:0rem;
+    right:2rem;
+  }
+  figure{
+    justify-content: center;
+  }
+  /* Menu button */
+
+  .img {
+    width: 10%;
+    max-width: 60px;
+    top: 1.3rem;
+    left: 0.7rem;
   }
 
+  p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-height:425px) and (min-aspect-ratio:7/4) {
