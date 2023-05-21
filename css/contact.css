@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Changa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 * {
   padding: 0;
@@ -70,8 +71,8 @@ h1 {
 }
 
 /* backgorund */
-.dot{
-  border:2px solid #b0f12e;
+.dot {
+  border: 2px solid #b0f12e;
   border-radius: 2rem;
 }
 
@@ -83,21 +84,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-h2{
-    margin-top: 5.5rem;
-    color: rgb(19, 122, 253);
-    margin-left: 3.5rem;
-  }
-.h4 {
+
+.h3 {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: rgb(255, 255, 255);
   cursor: default;
 }
 
-.container4 {
-  margin: 7rem auto 0 auto;
-}
 .contact {
   text-align: center;
   margin-top: 1rem;
@@ -111,72 +105,71 @@ h2{
   transform: scale(1.2)
 }
 
-.about1{
-    font-size: 1.3rem;
-    color: whitesmoke;
-    margin-left: 3.5rem;
-}
-.about2{
-    font-size: 1.3rem;
-    margin-top: 3.0rem;
-    color: whitesmoke;
-    margin-left: 3.5rem;
-}
-.alist{
-    margin-left: 4rem;
-    list-style-type:disc;
+.contact1 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  color: #137afd;
+  margin-top: 15rem;
 }
 
-.l{
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: whitesmoke;
-    display: block;
+.contact2 {
+  margin-top: 9rem;
+  color: whitesmoke;
 }
-.intro{
+
+.contact3 {
+  width: 100%;
+  margin-top: 9rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.intro {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
-.container{
-  width: 70%;
+
+.form {
+  display:grid;
+  ;grid-auto-flow: row;
+  margin-top: 3rem;
+  /* justify-content: space-between; */
 }
-figure{
-  padding-left: 4rem;
+
+.name {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  margin-left: 4rem;
+  margin-top: 0.5rem;
 }
-figure img{
+
+.msgcon {
+  width: 40%;
+  margin-left: 2rem;
+}
+
+.fname,
+.lname {
   /* border: 2px solid red; */
   border-radius: 1rem;
-  width:80%;
-  height: 100%;
+  height: 3rem;
 }
-.skill{
-    margin-top: 12rem;
-    height: 33rem;
-}
-.g{
-    display: flex;
-    margin-left: 1.9rem;
-    margin-top: 1.9rem;
-    flex-flow: row wrap;
-    row-gap:30px;
-    justify-content: space-around;
-} 
-.box{
-    display: flex;
-    color: aliceblue;
-    border:2px solid #7a7876;
-    border-radius: 1rem;
-    min-height: 10rem;
-    min-width: 15rem;
-    justify-content: center;
-    align-items: center;
 
-    transition-property: transform;
-    transition-duration: 0.1s;
-    transition-timing-function: ease-in-out;
+.txtarea {
+  border-radius: 1rem;
+  width: 270px;
+  height: 100px;
 }
-.box:hover{
-    transform: scale(1.2);
+
+.submit {
+  border-radius: 0.5rem;
+  width: 5rem;
+  height: 2rem;
 }
 
 /* media queries */
@@ -200,39 +193,56 @@ figure img{
     display: none;
   }
 
-  .h2{
-    display: flex;
-    justify-content: center;
+  .contact1 {
+    font-size: 3.3rem;
   }
-  h2{
-    text-align: center;
-    margin-left: 0rem;
+  .h3{
+    font-size: 1.5rem;
   }
-  .intro{
-    margin-top: 1rem;
+  .contact3 {
+    font-size: 1.5rem;
+  }
+
+  .form {
     flex-flow: column;
   }
-  .container{
-    width: 90%;
-  }
-  .alist{
-    margin-left: 5rem;
+
+  .name {
+    width: 70%;
+    margin-left: 3.3rem;
+    margin-top: 0.5rem;
   }
 
-  
-  figure {
-    margin-top: 5rem;
-    justify-content: center;
-    padding-left: 0rem;
+  .msgcon {
+    width: 100%;
+    margin-left: 3rem;
   }
-  
-  figure img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60%;
 
+  .fname,
+  .lname {
+    /* border: 2px solid red; */
+    border-radius: 1rem;
+    height: 3rem;
+    width: 100%;
   }
+
+  .txtarea {
+    margin-left: 0.4rem;
+    width: 68%;
+    height: 100px;
+  }
+  .msg{
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+  }
+  .submit {
+    border-radius: 0.5rem;
+    margin-left: 3.5rem;
+    width: 5rem;
+    height: 2rem;
+  }
+
+
   /* Menu button */
   button {
     position: absolute;
@@ -272,11 +282,6 @@ figure img{
     transform: translateY(-10px) rotate(-45deg)
   }
 
- 
-  p {
-    font-size: 1rem;
-  }
-
 }
 
 @media screen and (min-width:576px) {
@@ -299,23 +304,26 @@ figure img{
     display: none;
   }
 
-  .h2{
+  .h2 {
     display: flex;
     justify-content: center;
   }
-  h2{
+
+  h2 {
     text-align: center;
     margin-left: 0rem;
   }
 
-  .intro{
+  .intro {
     margin-top: 1rem;
     flex-flow: column;
   }
-  .container{
+
+  .container {
     width: 94%;
   }
-  .alist{
+
+  .alist {
     margin-left: 5rem;
   }
 
@@ -324,14 +332,14 @@ figure img{
     justify-content: center;
     padding-left: 0rem;
   }
-  
-  figure img{
+
+  figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 60%;
   }
-  
+
   /* Menu button */
   button {
     position: absolute;
@@ -396,24 +404,27 @@ figure img{
     display: none;
   }
 
-  .h2{
+  .h2 {
     display: flex;
     justify-content: center;
   }
-  h2{
+
+  h2 {
     text-align: center;
     margin-left: 0rem;
     font-size: 2rem;
   }
 
-  .intro{
+  .intro {
     margin-top: 1rem;
     flex-flow: column;
   }
-  .container{
+
+  .container {
     width: 100%;
   }
-  .alist{
+
+  .alist {
     margin-left: 15rem;
   }
 
@@ -422,14 +433,14 @@ figure img{
     justify-content: center;
     padding-left: 0rem;
   }
-  
-  figure img{
+
+  figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 60%;
   }
-  
+
   /* Menu button */
   button {
     position: absolute;
@@ -484,6 +495,7 @@ figure img{
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+
   .navlist {
     display: inline;
     top: 0.05rem;
@@ -495,37 +507,40 @@ figure img{
     font-size: 2rem;
   }
 
-  .h2{
+  .h2 {
     display: flex;
-    justify-content:left;
+    justify-content: left;
   }
-  h2{
+
+  h2 {
     text-align: left;
     margin-left: 3.5rem;
     font-size: 2rem;
   }
 
-  .intro{
+  .intro {
     margin-top: 1rem;
     flex-flow: row;
   }
-  .container{
+
+  .container {
     width: 80%;
   }
-  .alist{
+
+  .alist {
     margin-left: 7rem;
   }
 
   figure {
     margin-top: 2rem;
   }
-  
-  figure img{
+
+  figure img {
     display: block;
-    width:100%;
+    width: 100%;
     height: auto;
   }
-  
+
   li {
     font-size: 1.4rem;
     margin-inline: 0.7rem;
@@ -550,6 +565,7 @@ figure img{
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+
   .navlist {
     display: inline;
     top: 0.05rem;
@@ -561,37 +577,40 @@ figure img{
     font-size: 2rem;
   }
 
-  .h2{
+  .h2 {
     display: flex;
-    justify-content:left;
+    justify-content: left;
   }
-  h2{
+
+  h2 {
     text-align: left;
     margin-left: 3.5rem;
     font-size: 2rem;
   }
 
-  .intro{
+  .intro {
     margin-top: 1rem;
     flex-flow: row;
   }
-  .container{
+
+  .container {
     width: 80%;
   }
-  .alist{
+
+  .alist {
     margin-left: 7rem;
   }
 
   figure {
     margin-top: 1rem;
   }
-  
-  figure img{
+
+  figure img {
     display: block;
-    width:100%;
+    width: 100%;
     height: auto;
   }
-  
+
   li {
     font-size: 1.4rem;
     margin-inline: 0.7rem;
