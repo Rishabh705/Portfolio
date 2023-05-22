@@ -12,64 +12,76 @@
 }
 
 .hdr {
-  position: fixed;
+  /* position: fixed; */
+  top: 0rem;
   width: 100%;
   height: 54px;
   background: #0d0f1e;
   z-index: 1;
-  /* border: 1px solid yellow; */
-}
-
-header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  align-items: center;
+}
+
+header {
   /* border: 1px solid yellow; */
+  display: flex;
+  flex-flow: column;
   margin-top: 1.9px;
 }
 
+
 @keyframes showMenu {
-  0%{
-    transform: scaleY(0);
+  0% {
+      transform: scaleY(0);
   }
-  80%{
-    transform: scaleY(1.2);
-  }
-  100%{
-    transform: scaleY(1);
-  } 
-}
 
+  80% {
+      transform: scaleY(1.2);
+  }
+
+  100% {
+      transform: scaleY(1);
+  }
+}
 .navlist {
-  margin-top: 1rem;
+  background-color: #41413d;
+  display: none;
+  transform-origin: top center;
+  animation: showMenu 0.5s ease-in-out forwards;
 }
-
-ul {
+.navlist ul {
   list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
   font-family: 'Allerta Stencil', sans-serif;
   font-weight: 800;
-  padding: 0.65rem;
-  display: inline-block;
 }
 
-li {
+.navlist li {
+  padding: 0.5rem;
+  border-top: 1px solid #0d0f1e;
   font-size: 1.7rem;
-  display: inline-block;
-  margin-inline: 1rem;
 }
 
-li a {
+.navlist a {
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.navlist a:any-link {
+  font-weight: bold;
   color: white;
   text-decoration: none;
 }
 
-li :is(a:focus, a:hover) {
-  color: hsl(225, 95%, 52%);
-}
-
-li a:active {
+.navlist a:hover,
+.navlist a:focus {
+  transform: scale(1.2);
   color: whitesmoke;
+  transition: all 0.3s;
 }
 
 h1 {
@@ -148,8 +160,8 @@ body {
 }
 
 .form {
-  display:flex;
-  flex-flow:row;
+  display: flex;
+  flex-flow: row;
   margin-top: 3rem;
   /* justify-content: space-between; */
 }
@@ -197,8 +209,7 @@ body {
 
   header {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column;
   }
 
   h1 {
@@ -206,28 +217,27 @@ body {
     font-size: 1.5rem;
   }
 
-  .navlist {
-    display: none;
-  }
-
+  
   .contact1 {
     font-size: 3.3rem;
     margin-top: 9rem;
   }
-  .h3{
+  
+  .h3 {
     font-size: 1.5rem;
   }
+
   .contact3 {
     margin-top: 7rem;
     font-size: 1.5rem;
   }
-
+  
   .form {
     flex-flow: column;
     align-items: center;
     gap: 2rem;
   }
-
+  
   .name {
     width: 16rem;
     margin-left: 3.3rem;
@@ -238,22 +248,25 @@ body {
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
-  .usremail{
+  
+  .usremail {
     display: flex;
     flex-flow: column;
     padding-left: 0rem;
   }
-  .email{
+  
+  .email {
     padding-left: 1rem;
     border-radius: 1rem;
     height: 3rem;
     width: 16rem;
   }
+
   .msgcon {
     width: 16.5rem;
     padding-left: 0rem;
   }
-
+  
   .fname,
   .lname {
     /* border: 2px solid red; */
@@ -261,16 +274,18 @@ body {
     height: 3rem;
     width: 16rem;
   }
-
+  
   .txtarea {
     margin-left: 0.4rem;
     width: 16rem;
     height: 100px;
   }
-  .msg{
+  
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
+  
   .submit {
     border-radius: 0.5rem;
     margin-top: -2rem;
@@ -278,45 +293,61 @@ body {
     width: 5rem;
     height: 2rem;
   }
-
-
+    
   /* Menu button */
-  button {
-    position: absolute;
-    top: 9.5px;
+  .menu {
+    position: relative;
+    /* border: 1px solid yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    top: 0.1rem;
     right: 2rem;
     background: transparent;
+    border: none;
   }
 
-  .menu .icon {
-    position: relative;
-    width: 37px;
+  .icon,
+  .icon::before,
+  .icon::after {
+    position: absolute;
+    width: 42px;
     height: 3.5px;
     border-radius: 5px;
-    margin: 6px auto;
     background: whitesmoke;
     transition: all 0.3s;
   }
 
-  .menu {
-    border: none;
-    transition: all .5s;
+  .icon::before,
+  .icon::after {
+    content: " ";
   }
 
-  :is(button:hover) .icon:nth-child(2) {
+  .icon::before {
+    transform: translate(-21px, -12px);
+  }
+
+  .icon::after {
+    transform: translate(-21px, 12px);
+  }
+
+  :is(button:hover, button:focus-within) .icon {
     background-color: transparent;
-  }
-
-  .menu:hover {
     transform: rotate(720deg)
   }
 
-  :is(button:hover) .icon:nth-child(1) {
-    transform: translateY(9px) rotate(45deg)
+  :is(button:hover, button:focus-within) .icon::before {
+    transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(button:hover) .icon:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg)
+  :is(button:hover, button:focus-within) .icon::after {
+    transform: translateX(-20px) rotate(-45deg);
+  }
+  :is(button:hover, button:focus-within) .navlist {
+    display: block;
+    z-index: 1;
   }
 
 }
@@ -344,14 +375,16 @@ body {
   .contact1 {
     font-size: 3.3rem;
   }
-  .h3{
+
+  .h3 {
     font-size: 1.7rem;
   }
+
   .contact3 {
     font-size: 1.5rem;
   }
 
-   .form {
+  .form {
     flex-flow: column;
     padding-left: 25vw;
     gap: 2rem;
@@ -367,17 +400,20 @@ body {
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
-  .usremail{
+
+  .usremail {
     display: flex;
     flex-flow: column;
     padding-left: 0rem;
   }
-  .email{
+
+  .email {
     padding-left: 1rem;
     border-radius: 1rem;
     height: 3rem;
     width: 16rem;
   }
+
   .msgcon {
     width: 16.5rem;
     padding-left: 0rem;
@@ -393,13 +429,15 @@ body {
 
   .txtarea {
     margin-left: 0.4rem;
-    width:25rem;
+    width: 25rem;
     height: 100px;
   }
-  .msg{
+
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
+
   .submit {
     border-radius: 0.5rem;
     margin-top: -2rem;
@@ -473,9 +511,11 @@ body {
   .contact1 {
     font-size: 3.3rem;
   }
-  .h3{
+
+  .h3 {
     font-size: 1.7rem;
   }
+
   .contact3 {
     font-size: 1.5rem;
     margin-top: 5.7rem;
@@ -497,28 +537,32 @@ body {
     margin-left: 0rem;
     margin-top: 0rem;
   }
-  .usremail{
+
+  .usremail {
     padding-left: 0rem;
     margin-left: -17rem;
   }
+
   .msgcon {
     width: 37.5rem;
     margin-left: 0rem;
     padding-left: 0rem;
   }
-  
+
   .submit {
     border-radius: 0.5rem;
     margin-left: 0rem;
     width: 5rem;
     height: 2rem;
   }
-  .email{
+
+  .email {
     padding-left: 1rem;
     border-radius: 1rem;
     height: 3rem;
     width: 20rem;
   }
+
   .fname,
   .lname {
     /* border: 2px solid red; */
@@ -529,10 +573,11 @@ body {
 
   .txtarea {
     margin-left: 0.4rem;
-    width:30rem;
+    width: 30rem;
     height: 100px;
   }
-  .msg{
+
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
@@ -591,7 +636,15 @@ body {
   }
 
   .navlist {
-    display: inline;
+    background: #0d0f1e;
+    display: inline-block;
+  }
+  .navlist li{
+    margin-inline:0.3rem;
+  }
+  .navlist ul{
+    padding-right: 1.5rem;
+    flex-flow: row nowrap;
   }
 
   h1 {
@@ -602,9 +655,11 @@ body {
   .contact1 {
     font-size: 3.3rem;
   }
-  .h3{
+
+  .h3 {
     font-size: 1.7rem;
   }
+
   .contact3 {
     font-size: 1.5rem;
     margin-top: 5.5rem;
@@ -626,16 +681,18 @@ body {
     margin-left: 0rem;
     margin-top: 0rem;
   }
-  .usremail{
+
+  .usremail {
     padding-left: 0rem;
     margin-left: -17rem;
   }
+
   .msgcon {
     width: 37.5rem;
     margin-left: 0rem;
     padding-left: 0rem;
   }
-  
+
   .submit {
     border-radius: 0.5rem;
     margin-left: 0rem;
@@ -653,10 +710,11 @@ body {
 
   .txtarea {
     margin-left: 0.4rem;
-    width:30rem;
+    width: 30rem;
     height: 200px;
   }
-  .msg{
+
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
@@ -678,7 +736,12 @@ body {
   }
 
   .navlist {
-    display: inline;
+    background: #0d0f1e;
+    display: inline-block;
+  }
+  .navlist ul{
+    padding-right: 1.5rem;
+    flex-flow: row nowrap;
   }
 
   h1 {
@@ -689,9 +752,11 @@ body {
   .contact1 {
     font-size: 3.3rem;
   }
-  .h3{
+
+  .h3 {
     font-size: 1.7rem;
   }
+
   .contact3 {
     font-size: 1.5rem;
     margin-top: 10rem;
@@ -714,22 +779,25 @@ body {
     margin-left: 0rem;
     margin-top: 0rem;
   }
-  .usremail{
+
+  .usremail {
     padding-left: 0rem;
     margin-left: -30rem;
   }
+
   .msgcon {
     width: 37.5rem;
     margin-left: -13rem;
     padding-left: 0rem;
   }
-  
+
   .submit {
     border-radius: 0.5rem;
     margin-left: 0rem;
     width: 5rem;
     height: 2rem;
   }
+
   .fname,
   .lname {
     /* border: 2px solid red; */
@@ -740,10 +808,11 @@ body {
 
   .txtarea {
     margin-left: 0.4rem;
-    width:30rem;
+    width: 30rem;
     height: 200px;
   }
-  .msg{
+
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
@@ -778,9 +847,11 @@ body {
     font-size: 3.3rem;
     margin-top: 10rem;
   }
-  .h3{
+
+  .h3 {
     font-size: 1.7rem;
   }
+
   .contact3 {
     font-size: 1.5rem;
     margin-top: 4rem;
@@ -814,10 +885,12 @@ body {
     width: 20rem;
     height: 100px;
   }
-  .msg{
+
+  .msg {
     font-size: 1.5rem;
     margin-left: 0.3rem;
   }
+
   .submit {
     border-radius: 0.5rem;
     margin-left: 3.5rem;
