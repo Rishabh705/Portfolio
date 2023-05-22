@@ -21,6 +21,10 @@
 }
 
 header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
   /* border: 1px solid yellow; */
   margin-top: 1.9px;
 }
@@ -38,9 +42,7 @@ header {
 }
 
 .navlist {
-  position: absolute;
-  top: -0.2rem;
-  right: 2rem;
+  margin-top: 1rem;
 }
 
 ul {
@@ -72,8 +74,6 @@ li a:active {
 
 h1 {
   display: inline-block;
-  padding: 6px;
-  font-style: bold;
   font-size: 2rem;
   color: #137afd;
   font-family: "Zen Dots", 'Allerta Stencil', sans-serif;
@@ -164,17 +164,19 @@ body {
 
 .msgcon {
   width: 40%;
-  margin-left: 2rem;
+  padding-left: 3rem;
 }
 
 .fname,
 .lname {
   /* border: 2px solid red; */
+  padding-left: 1rem;
   border-radius: 1rem;
   height: 3rem;
 }
 
 .txtarea {
+  padding: 1rem;
   border-radius: 1rem;
   width: 270px;
   height: 100px;
@@ -184,6 +186,7 @@ body {
   border-radius: 0.5rem;
   width: 5rem;
   height: 2rem;
+  font-size: 1.1rem;
 }
 
 /* media queries */
@@ -199,8 +202,8 @@ body {
   }
 
   h1 {
-    padding: 8px;
-    font-size: 1.8rem;
+    padding: 12px;
+    font-size: 1.5rem;
   }
 
   .navlist {
@@ -209,27 +212,46 @@ body {
 
   .contact1 {
     font-size: 3.3rem;
+    margin-top: 9rem;
   }
   .h3{
     font-size: 1.5rem;
   }
   .contact3 {
+    margin-top: 7rem;
     font-size: 1.5rem;
   }
 
   .form {
     flex-flow: column;
+    align-items: center;
+    gap: 2rem;
   }
 
   .name {
-    width: 15rem;
+    width: 16rem;
     margin-left: 3.3rem;
     margin-top: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-left: 0rem;
+    margin-top: 0.5rem;
   }
-
+  .usremail{
+    display: flex;
+    flex-flow: column;
+    padding-left: 0rem;
+  }
+  .email{
+    padding-left: 1rem;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 16rem;
+  }
   .msgcon {
-    width: 100%;
-    margin-left: 3rem;
+    width: 16.5rem;
+    padding-left: 0rem;
   }
 
   .fname,
@@ -237,12 +259,12 @@ body {
     /* border: 2px solid red; */
     border-radius: 1rem;
     height: 3rem;
-    width: 100%;
+    width: 16rem;
   }
 
   .txtarea {
     margin-left: 0.4rem;
-    width: 15rem;
+    width: 16rem;
     height: 100px;
   }
   .msg{
@@ -251,7 +273,8 @@ body {
   }
   .submit {
     border-radius: 0.5rem;
-    margin-left: 3.5rem;
+    margin-top: -2rem;
+    margin-left: -10.5rem;
     width: 5rem;
     height: 2rem;
   }
@@ -328,19 +351,36 @@ body {
     font-size: 1.5rem;
   }
 
-  .form {
+   .form {
     flex-flow: column;
+    padding-left: 25vw;
+    gap: 2rem;
   }
 
   .name {
-    width: 15rem;
+    width: 16rem;
     margin-left: 3.3rem;
     margin-top: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-left: 0rem;
+    margin-top: 0.5rem;
   }
-
+  .usremail{
+    display: flex;
+    flex-flow: column;
+    padding-left: 0rem;
+  }
+  .email{
+    padding-left: 1rem;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 16rem;
+  }
   .msgcon {
-    width: 100%;
-    margin-left: 3rem;
+    width: 16.5rem;
+    padding-left: 0rem;
   }
 
   .fname,
@@ -362,7 +402,8 @@ body {
   }
   .submit {
     border-radius: 0.5rem;
-    margin-left: 3.5rem;
+    margin-top: -2rem;
+    margin-left: 0.5rem;
     width: 5rem;
     height: 2rem;
   }
@@ -441,21 +482,43 @@ body {
   }
 
   .form {
-    margin-left: 6rem;
+    align-items: center;
+    margin-left: 0rem;
+    padding-left: 0rem;
     flex-flow: column;
+    gap: 2rem;
   }
 
   .name {
-    width: 15rem;
-    margin-left: 3.3rem;
-    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row;
+    gap: 6rem;
+    width: 37rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
   }
-
+  .usremail{
+    padding-left: 0rem;
+    margin-left: -17rem;
+  }
   .msgcon {
-    width: 100%;
-    margin-left: 3rem;
+    width: 37.5rem;
+    margin-left: 0rem;
+    padding-left: 0rem;
   }
-
+  
+  .submit {
+    border-radius: 0.5rem;
+    margin-left: 0rem;
+    width: 5rem;
+    height: 2rem;
+  }
+  .email{
+    padding-left: 1rem;
+    border-radius: 1rem;
+    height: 3rem;
+    width: 20rem;
+  }
   .fname,
   .lname {
     /* border: 2px solid red; */
@@ -472,12 +535,6 @@ body {
   .msg{
     font-size: 1.5rem;
     margin-left: 0.3rem;
-  }
-  .submit {
-    border-radius: 0.5rem;
-    margin-left: 3.5rem;
-    width: 5rem;
-    height: 2rem;
   }
 
 
@@ -535,8 +592,6 @@ body {
 
   .navlist {
     display: inline;
-    top: 0.05rem;
-    right: 0rem;
   }
 
   h1 {
@@ -556,22 +611,36 @@ body {
   }
 
   .form {
-    display: grid;
-    grid-auto-flow: row;
-    margin-left: 4rem;
-    margin-top: 6rem;
-    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-left: 0rem;
+    padding-left: 0rem;
+    flex-flow: column;
+    gap: 2rem;
   }
 
   .name {
-    width:15rem;
-    margin-left: 3.3rem;
-    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row;
+    gap: 6rem;
+    width: 37rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
   }
-
+  .usremail{
+    padding-left: 0rem;
+    margin-left: -17rem;
+  }
   .msgcon {
-    width: 100%;
-    margin-left: 3rem;
+    width: 37.5rem;
+    margin-left: 0rem;
+    padding-left: 0rem;
+  }
+  
+  .submit {
+    border-radius: 0.5rem;
+    margin-left: 0rem;
+    width: 5rem;
+    height: 2rem;
   }
 
   .fname,
@@ -590,12 +659,6 @@ body {
   .msg{
     font-size: 1.5rem;
     margin-left: 0.3rem;
-  }
-  .submit {
-    border-radius: 0.5rem;
-    margin-left: 3.5rem;
-    width: 5rem;
-    height: 2rem;
   }
 
   button {
@@ -616,8 +679,6 @@ body {
 
   .navlist {
     display: inline;
-    top: 0.05rem;
-    right: 0rem;
   }
 
   h1 {
@@ -637,21 +698,38 @@ body {
   }
 
   .form {
-    margin-left: 15rem;
-    flex-flow: row;
+    height: 35rem;
+    align-items: center;
+    margin-left: 0rem;
+    padding-left: 0rem;
+    flex-flow: column;
+    gap: 2rem;
   }
 
   .name {
-    width:15rem;
-    margin-left: 3.3rem;
-    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row;
+    gap: 15rem;
+    width: 50rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
   }
-
+  .usremail{
+    padding-left: 0rem;
+    margin-left: -30rem;
+  }
   .msgcon {
-    width: 100%;
-    margin-left: 3rem;
+    width: 37.5rem;
+    margin-left: -13rem;
+    padding-left: 0rem;
   }
-
+  
+  .submit {
+    border-radius: 0.5rem;
+    margin-left: 0rem;
+    width: 5rem;
+    height: 2rem;
+  }
   .fname,
   .lname {
     /* border: 2px solid red; */
@@ -668,12 +746,6 @@ body {
   .msg{
     font-size: 1.5rem;
     margin-left: 0.3rem;
-  }
-  .submit {
-    border-radius: 0.5rem;
-    margin-left: 3.5rem;
-    width: 5rem;
-    height: 2rem;
   }
 
   button {
