@@ -333,19 +333,20 @@ body {
     transform: translate(-21px, 12px);
   }
 
-  :is(button:hover, button:focus-within) .icon {
+  :is(header:hover, header:focus-within) .icon {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(button:hover, button:focus-within) .icon::before {
+  :is(header:hover, header:focus-within) .icon::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(button:hover, button:focus-within) .icon::after {
+  :is(header:hover, header:focus-within) .icon::after {
     transform: translateX(-20px) rotate(-45deg);
   }
   :is(header:hover, header:focus-within) .navlist {
+    padding: 0;
     display: block;
     z-index: 1;
   }
@@ -482,19 +483,20 @@ body {
     transform: translate(-21px, 12px);
   }
 
-  :is(button:hover, button:focus-within) .icon {
+  :is(header:hover, header:focus-within) .icon {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(button:hover, button:focus-within) .icon::before {
+  :is(header:hover, header:focus-within) .icon::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(button:hover, button:focus-within) .icon::after {
+  :is(header:hover, header:focus-within) .icon::after {
     transform: translateX(-20px) rotate(-45deg);
   }
   :is(header:hover, header:focus-within) .navlist {
+    padding: 0;
     display: block;
     z-index: 1;
   }
@@ -630,19 +632,20 @@ body {
     transform: translate(-21px, 12px);
   }
 
-  :is(button:hover, button:focus-within) .icon {
+  :is(header:hover, header:focus-within) .icon {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(button:hover, button:focus-within) .icon::before {
+  :is(header:hover, header:focus-within) .icon::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(button:hover, button:focus-within) .icon::after {
+  :is(header:hover, header:focus-within) .icon::after {
     transform: translateX(-20px) rotate(-45deg);
   }
   :is(header:hover, header:focus-within) .navlist {
+    padding:0;
     display: block;
     z-index: 1;
   }
@@ -663,6 +666,7 @@ body {
   .navlist {
     background: #0d0f1e;
     display: inline-block;
+    animation: none;
   }
   .navlist li{
     margin-inline:0.3rem;
@@ -763,6 +767,7 @@ body {
   .navlist {
     background: #0d0f1e;
     display: inline-block;
+    animation:none;
   }
   .navlist ul{
     padding-right: 1.5rem;
