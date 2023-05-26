@@ -1,6 +1,6 @@
 const menu_icon = document.querySelector(".icon");
 const nav = document.querySelector(".navlist");
-const main = document.querySelector(".container");
+const main = document.querySelector(".main");
 function perform() {
     var x = document.getElementById("nl");
     if (x.style.display === "block") {
@@ -20,6 +20,3 @@ main.addEventListener("click", () => {
       menu_icon.classList.remove("icon_clicked","icon_clicked::before","icon_clicked::after");
     }    
 }, false);
-
-menu_icon.addEventListener("click",()=>{
-})

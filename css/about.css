@@ -42,7 +42,10 @@ header {
     transform: scaleY(1);
   }
 }
-
+h1 a{
+  color: #137afd;
+  text-decoration: none;
+}
 .navlist {
   background-color: #41413d;
   display: none;
@@ -103,7 +106,6 @@ h1 {
 
 body {
   font-family: "Changa";
-  background-color: hsl(256, 36%, 16%);
   min-height: 160vh;
   background: #1b1621;
   display: flex;
@@ -170,10 +172,12 @@ h2 {
 
 .alist {
   margin-left: 4rem;
-  list-style-type: disc;
+  list-style-type: square;
+  color: #137afd;
 }
 
 .l {
+  list-style-image: url("/portfolio/img/bullet-point.png");
   font-size: 1.3rem;
   margin-bottom: 10px;
   color: whitesmoke;
@@ -294,10 +298,10 @@ figure img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48px;
-    height: 48px;
-    top: 0.1rem;
-    right: 2rem;
+    width: 40px;
+    height: 40px;
+    top: 0.4rem;
+    right: 1.6rem;
     background: transparent;
     border: none;
   }
@@ -306,7 +310,7 @@ figure img {
   .icon::before,
   .icon::after {
     position: absolute;
-    width: 42px;
+    width: 35px;
     height: 3.5px;
     border-radius: 5px;
     background: whitesmoke;
@@ -319,29 +323,24 @@ figure img {
   }
 
   .icon::before {
-    transform: translate(-21px, -12px);
+    transform: translate(-17.5px, -12px);
   }
 
   .icon::after {
-    transform: translate(-21px, 12px);
+    transform: translate(-17.5px, 12px);
   }
 
-  :is(header:hover, header:focus-within) .icon {
+  .icon_clicked {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(header:hover, header:focus-within) .icon::before {
+  .icon_clicked::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(header:hover, header:focus-within) .icon::after {
+  .icon_clicked::after {
     transform: translateX(-20px) rotate(-45deg);
-  }
-  :is(header:hover, header:focus-within) .navlist {
-    padding:0;
-    display: block;
-    z-index: 1;
   }
 
   p {
@@ -437,22 +436,17 @@ figure img {
     transform: translate(-21px, 12px);
   }
 
-  :is(header:hover, header:focus-within) .icon {
+  .icon_clicked {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(header:hover, header:focus-within) .icon::before {
+  .icon_clicked::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(header:hover, header:focus-within) .icon::after {
+  .icon_clicked::after {
     transform: translateX(-20px) rotate(-45deg);
-  }
-  :is(header:hover, header:focus-within) .navlist {
-    padding:0;
-    display: block;
-    z-index: 1;
   }
 
   p {
@@ -548,22 +542,17 @@ figure img {
     transform: translate(-21px, 12px);
   }
 
-  :is(header:hover, header:focus-within) .icon {
+  .icon_clicked {
     background-color: transparent;
     transform: rotate(720deg)
   }
 
-  :is(header:hover, header:focus-within) .icon::before {
+  .icon_clicked::before {
     transform: translateX(-20px) rotate(45deg);
   }
 
-  :is(header:hover, header:focus-within) .icon::after {
+  .icon_clicked::after {
     transform: translateX(-20px) rotate(-45deg);
-  }
-  :is(header:hover, header:focus-within) .navlist {
-    padding:0;
-    display: block;
-    z-index: 1;
   }
 
   p {
@@ -753,10 +742,5 @@ figure img {
   .contact {
     margin-top: 3rem;
     margin-bottom: 1rem;
-  }
-  :is(header:hover, header:focus-within) .navlist {
-    padding: 0;
-    display: block;
-    z-index: 1;
   }
 }
