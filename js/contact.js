@@ -39,7 +39,7 @@ var star = document.querySelector(".star");
 var Dots = star.querySelectorAll('.dot');
 var winWidth = window.innerWidth;
 var winHeight = window.innerHeight;
-console.log(winWidth,winHeight);
+// console.log(winWidth,winHeight);
 for (let i = 0; i < Dots.length; i++) {
   
   var dot = Dots[i];
@@ -52,3 +52,14 @@ for (let i = 0; i < Dots.length; i++) {
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
+
+// Message control
+
+let fname = document.querySelector('#fname');
+console.log(fname);
+let lname = document.querySelector('#lname');
+console.log(lname);
+let email = document.querySelector('.email');
+console.log(email);
+let txtarea = document.querySelector('.txtarea');
+console.log(txtarea);
